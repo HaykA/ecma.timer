@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900');
+
+body {
+    font-family: "Titillium Web", sans-serif;
+}
+
+header h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.timer-container {
+    margin-bottom: 30px;
+}
+
+
+.timer-display {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timer-display > div {
+    box-sizing: content-box;
+}
+
+.timer-display > div:hover {
+    color: #cc0000;
+    cursor: pointer;
+}
+
+.timer-settings label {
+    font-weight: 600;
+    vertical-align: baseline;
+}
+
+#timer-settings label {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 4px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .timer {
+        margin-top: 8px;
+    }
+    .timer-display {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .timer-header {
+        font-size: 2rem;
+    }
+    .timer-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .timer button {
+        display: block;
+        width: 100%;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        border-radius: 0;
+    }
+    .timer-settings li {
+        width: 100%;
+        text-align: left;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .timer-settings li label {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+    .timer-settings li input[type=checkbox] {
+        zoom: 1.5;
+        margin-top: 0;
+        vertical-align: text-bottom;
+    }
+    .timer-large .timer-content .timer-display {
+        font-family: "Titillium Web", sans-serif;
+        color: #333;
+        font-size: 16vmin;
+        font-weight: 700;
+    }
+}
+@media screen and (max-height: 481px) {
+    .timer-large .timer-content .timer-display {
+        font-family: "Titillium Web", sans-serif;
+        color: #333;
+        font-size: 16vmin;
+        font-weight: 700;
+    }
+}
+@media screen and (min-width: 481px) {
+    header h1 {
+        font-size: 6rem;
+    }
+    .timer-header {
+        font-size: 3rem;
+    }
+    .timer-settings li {
+        display: inline-block;
+    }
+    .timer-settings li label {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .timer-settings li:not(:first-of-type) {
+        margin-left: 10px;
+    }
+    .timer-large .timer-content .timer-display {
+        font-size: 7vmin;
+        color: #666;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .timer-settings {
+
+    }
+    .timer-settings li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .timer-settings ul {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .timer-settings li {
+        font-size: 2rem;
+    }
+    .timer-settings li:not(:first-of-type) {
+        margin-left: 15px;
+    }
+    .timer-settings ul {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .timer-large .timer-content .timer-display {
+        font-size: 8vmin;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .timer-content {
+        max-width: 100%;
+    }
+    .timer-footer {
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .timer-content {
+        max-width: 1200px;
+    }
+    .timer-footer {
+        margin-top: 15px;
+    }
+}
+

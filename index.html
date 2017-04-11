@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta name="author" content="Hayk AVETISYAN"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/timer.css"/>
+    <title>Timer</title>
+</head>
+
+<body>
+<div class="container-fluid timer-container">
+    <header>
+        <h1><i class="fa fa-clock-o"></i> Timer</h1>
+    </header>
+
+    <main>
+
+
+            <div class="timer timer-large" data-timer-start="manual" data-timer-age="30000" data-timer-delay="1500">
+                <div class="timer-content">
+                    <div class="timer-header">
+                        Timer Display
+                    </div>
+                    <div class="timer-display"></div>
+                    <div class="timer-footer">
+                        <button id="stop-timer" data-timer-control="expire" class="btn btn-danger">
+                            <i class="fa fa-fw fa-stop"></i> Stop!
+                        </button>
+                        <button id="start-timer" data-timer-control="start" class="btn btn-success">
+                            <i class="fa fa-fw fa-play"></i> Start
+                        </button>
+                        <button id="pause-timer" data-timer-control="stop" class="btn btn-warning">
+                            <i class="fa fa-fw fa-pause"></i> Pause
+                        </button>
+                        <button id="reset-timer" class="btn btn-primary">
+                            <i class="fa fa-fw fa-undo"></i> Reset
+                        </button>
+                        <div class="timer-settings">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="hh" name="hours" checked="checked"/>
+                                    <label for="hh">Hours</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="mm" name="minutes" checked="checked"/>
+                                    <label for="mm">Minutes</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="ss" name="seconds" checked="checked"/>
+                                    <label for="ss">Seconds</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="ds" name="deciseconds" checked="checked"/>
+                                    <label for="ds">Deciseconds</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <form>
+            <div id="timer-settings" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h3 class="modal-title"><i class="fa fa-clock-o"></i> <span></span></h3>
+                            </div>
+                            <div class="modal-body">
+                                <h4><label for="timer-setting" class="label label-primary">&nbsp;</label></h4>
+                                <input id="timer-setting" type="number" class="form-control" placeholder="" required="required"/>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i
+                                        class="fa fa-reply"></i> Discard
+                                </button>
+                                <button id="save-settings" type="submit" class="btn btn-primary"><i
+                                        class="fa fa-save"></i> Save changes
+                                </button>
+                            </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </form>
+    </main>
+</div>
+<footer><small>Copyright &copy; Hayk Avetisyan 2017</small></footer>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/timer.js"></script>
+
+</html>
